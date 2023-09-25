@@ -474,7 +474,7 @@
     $(function () {
       $.ajax({
         type: "GET",
-        url: "api/product_r_api.php",
+        url: APILINKS + "product_r_api.php",
         dataType: "json",
 
         success: showdata,
@@ -541,7 +541,7 @@
         }
         $.ajax({
           type: "POST",
-          url: "api/car_c_api.php",
+          url: APILINKS + "car_c_api.php",
           dataType: "json",
           data: {
             p_c_name: pName,
