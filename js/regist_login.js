@@ -181,9 +181,9 @@ $(function () {
 
         // 判斷登入狀態為 Ture 作 Toast 顯示
         if (data.state == true) {
-          $("#toast_windows").removeClass("d-none");
+          $("#login_toast_windows").removeClass("d-none");
         } else {
-          $("#toast_windows").addClass("d-none");
+          $("#login_toast_windows").addClass("d-none");
         }
       },
       error: function () {
