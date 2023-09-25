@@ -284,7 +284,7 @@
                         <th>信箱</th>
                         <th>地址</th>
                         <th>電話</th>
-                        <th>#</th>
+                        <!-- <th>#</th> 刪除按鈕的欄位--> 
                     </tr>
                 </thead>
                 <tbody v-for="(item, key) in filterData">
@@ -297,9 +297,9 @@
                         <td data-th="信箱"><span class="table-col">{{item.c_Mail}}</span></td>
                         <td data-th="地址"><span class="table-col">{{item.c_Addr}}</span></td>
                         <td data-th="電話"><span class="table-col">{{item.c_Phone}}</span></td>
-                        <td>
+                        <!-- <td>
                             <a href="#" class="btn btn-danger" @click="deleteContent(item.ID)">刪除</a>
-                        </td>
+                        </td>  刪除按鈕(施工中)-->
                     </tr>
                 </tbody>
 
@@ -448,49 +448,49 @@
                         return '普通會員';
                     }
                 },
+    
+                // 刪除方法(施工中)
+                // getdelete(item) {
+                //     const vm = this;
+                //     $.ajax({
+                //         url: APILINKS + 'car_d_api.php',
+                //         data: { id: item.ID },
+                //         dataType: 'json',
+                //         success: function (data) {
+                //             //使用 findIndex 方法找出 在 vm.orderdata 中的索引ID
+                //             const table = vm.orderdata.findIndex(order => order.ID == item.ID);
+                //             if (table !== -1) {
+                //                 // splice : 用來刪除。 語法(splice(start, deleteCount)), start:起始索引的位置 deleteCount:刪除的值
+                //                 // 使用 splice 方法 從 table 中删除一個物件
+                //                 vm.orderdata.splice(table, 1);
+                //             }
+                //         }
+                //     });
+                // },
+                // deleteContent(id) {
+                //     const vm = this;
+                //     $.ajax({
+                //         url: APILINKS + 'car_d_api.php',
+                //         method: 'POST',
+                //         data: {
+                //             id: id // 发送要删除的数据的ID
+                //         },
+                //         success: function (response) {
+                //             // 成功删除后，从Vue数据中删除被删除的项目
+                //             const indexToDelete = vm.orderdata.findIndex(item => item.ID === id);
+                //             if (indexToDelete !== -1) {
+                //                 vm.orderdata.splice(indexToDelete, 1);
+                //             }
 
-
-                getdelete(item) {
-                    const vm = this;
-                    $.ajax({
-                        url: APILINKS + 'car_d_api.php',
-                        data: { id: item.ID },
-                        dataType: 'json',
-                        success: function (data) {
-                            //使用 findIndex 方法找出 在 vm.orderdata 中的索引ID
-                            const table = vm.orderdata.findIndex(order => order.ID == item.ID);
-                            if (table !== -1) {
-                                // splice : 用來刪除。 語法(splice(start, deleteCount)), start:起始索引的位置 deleteCount:刪除的值
-                                // 使用 splice 方法 從 table 中删除一個物件
-                                vm.orderdata.splice(table, 1);
-                            }
-                        }
-                    });
-                },
-                deleteContent(id) {
-                    const vm = this;
-                    $.ajax({
-                        url: APILINKS + 'car_d_api.php',
-                        method: 'POST',
-                        data: {
-                            id: id // 发送要删除的数据的ID
-                        },
-                        success: function (response) {
-                            // 成功删除后，从Vue数据中删除被删除的项目
-                            const indexToDelete = vm.orderdata.findIndex(item => item.ID === id);
-                            if (indexToDelete !== -1) {
-                                vm.orderdata.splice(indexToDelete, 1);
-                            }
-
-                            // 成功消息
-                            console.log(response);
-                            alert("刪除成功");
-                        },
-                        error: function (error) {
-                            console.error(error); // 记录错误消息
-                        }
-                    });
-                }
+                //             // 成功消息
+                //             console.log(response);
+                //             alert("刪除成功");
+                //         },
+                //         error: function (error) {
+                //             console.error(error); // 记录错误消息
+                //         }
+                //     });
+                // }
 
             }
         }
