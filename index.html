@@ -161,7 +161,7 @@
             </div>
         </div>
     </section>
-    
+
     <!--loginModal-->
     <!-- Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -275,7 +275,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- login_Toasts -->
     <section id="login_toast_windows" class="d-none">
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -293,7 +293,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- logout_Toasts -->
     <section id="logout_toast_windows" class="d-none">
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -783,19 +783,17 @@
         $(function () {
             $.ajax({
                 type: "GET",
-                url: "api/index_charjs-api.php",
+                url: APILINKS + "index_charjs-api.php",
                 dataType: "json",
                 success: showdata,
                 error: function () {
-                    alert("error-api/index_charjs-api.php");
+                    alert("error-" + APILINKS + "index_charjs-api.php");
                 }
             });
         });
 
 
         const ctx = document.getElementById('myChart');
-
-
 
         const myChart = new Chart(ctx, {
             type: 'bar',
@@ -853,7 +851,7 @@
                 toast.show();
             });
         }
-        
+
         //logout_Toasts 監聽按鈕
         const logout_toastTrigger = document.getElementById('logout_btn')
         const logout_toastLiveExample = document.getElementById('logout_Toasts')
