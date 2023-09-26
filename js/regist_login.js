@@ -290,6 +290,6 @@ $(function () {
     setCookie("uid01", "", 7);
     setCookie("level", " ", 7);
     alert("登出成功");
-    location.href = LINKS + "index.html";
+    location.href = "index.html";
   }
 });

@@ -497,11 +497,11 @@
             });
           } else {
             alert("請先勾選付款方式");
-            location.href = LINKS + "car.html";
+            location.href = "car.html";
           }
         } else {
           alert("請先加入購物車！");
-          location.href = LINKS + "car.html";
+          location.href = "car.html";
         }
       });
     }); // 主程式結尾
@@ -541,7 +541,7 @@
     function showdata_delete(data) {
       if (data.state) {
         alert(data.message);
-        location.href = LINKS + "car.html";
+        location.href = "car.html";
       } else {
         alert(data.message);
       }
@@ -553,7 +553,7 @@
       console.log(data.data);
       if (level == 'A') {
         alert("結帳成功");
-        location.href = LINKS + "index.html";
+        location.href = "index.html";
       } else if (data.data > 20000 && level == 'B') {
         $.ajax({
           url: APILINKS + "level_u_api.php",
@@ -566,7 +566,7 @@
           success: function (data) {
             alert("恭喜您" + data.message + ": 高級");
             setCookie("level", 'A');
-            location.href = LINKS + "index.html";
+            location.href = "index.html";
           },
           error: function () {
             alert("error-api/level_u_api.php");
@@ -574,7 +574,7 @@
         });
       } else {
         alert("結帳成功");
-        location.href = LINKS + "index.html";
+        location.href = "index.html";
       }
     }
   </script>
