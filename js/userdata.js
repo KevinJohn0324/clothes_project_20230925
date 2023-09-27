@@ -118,7 +118,7 @@ $("#data_u_btn").click(function () {
   }
 });
 
-
+var totalPrice = 0;
 // u_recordModal 監聽按鈕
 $(".u_recordModal").click(function () {
   console.log("text");
@@ -131,7 +131,7 @@ $(".u_recordModal").click(function () {
       console.log(data);
       $("#recode_table").empty();
 
-      var totalPrice = 0;
+     
       data.data.forEach(function (item) {
         if (item.c_UserName == Username && item.c_Active == "Y") {
           var strHTML =
