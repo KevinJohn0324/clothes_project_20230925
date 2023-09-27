@@ -134,7 +134,7 @@ $(".u_recordModal").click(function () {
       
 
       data.data.forEach(function (item) {
-        if (data.data[0].userName == Username && item.c_Active == "Y") {
+        if (item.userName == Username && item.c_Active == "Y") {
           var strHTML =
             '<tr class="text-center"><td>' +
             item.c_Date +
