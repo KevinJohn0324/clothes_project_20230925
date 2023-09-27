@@ -6,7 +6,6 @@ var Mail;
 var Addr;
 var Phone;
 var level;
-var totalPrice;
 $(function () {
   //確認uid是否存在，若存在傳至後端check_uid_api.php確認是否合法
   if (getCookie("uid01") != "") {
