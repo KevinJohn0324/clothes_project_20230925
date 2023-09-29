@@ -501,7 +501,6 @@
                         url: APILINKS + 'form_r_api.php',
                         dataType: 'json',
                         success: function (data) {
-                            console.log(data.data);
                             vm.fromdata = data.data;
                             vm.geactive();
                         }
@@ -547,11 +546,10 @@
                             },
                             success: function (response) {
                                 // 成功訊息
-                                console.log(response); // 
+                                alert(response); // 
                             },
                             error: function () {
-
-                                console.error(error); // 記錄錯誤訊息
+                                alert("error" + APILINKS + 'form_u_api.php'); // 記錄錯誤訊息
                             }
                         });
                     },
@@ -571,11 +569,10 @@
                                 }
 
                                 // 成功消息
-                                console.log(response);
                                 alert("刪除成功");
                             },
                             error: function (error) {
-                                console.error(error); // 錯誤訊息
+                               alert("error" + APILINKS + 'form_d_api.php'); // 錯誤訊息
                             }
                         });
                     }
